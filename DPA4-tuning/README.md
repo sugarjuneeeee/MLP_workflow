@@ -6,3 +6,11 @@
 5.微调命令：dp --pt train fintune.json --finetune 预训练模型.pt >finetune.log 2>&
 6.冻结模型：dp --pt freeze -c model.ckpt.pt -o frozen_model.pth ——生成.pt2文件
 7.测试模型：dp --pt test -m model.ckpt.pt -s deepmd_data/test  -d test.out
+json文件的生成：
+1.python make_input_dpa4_air_finetune.py 目录中需要有DPA4-Air-OMat24-v20260627.json生成input_dpa4_air_finetune.json
+2.更新json中的路径
+python update_deepmd_json_paths.py \
+  -i input_dpa4_air_finetune.json \
+  --data-root data \                #数据根路径名称
+  --train-subdir train \            #训练数据路径名称
+  --valid-subdir valid              #验证数据路径名称
