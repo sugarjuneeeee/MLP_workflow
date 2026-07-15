@@ -49,6 +49,7 @@ def is_deepmd_system_dir(path: Path) -> bool:
         "coord.npy",
         "energy.npy",
         "force.npy",
+        "virial.npy",
     ]
 
     for set_dir in set_dirs:
