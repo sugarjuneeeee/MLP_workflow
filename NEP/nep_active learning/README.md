@@ -1,5 +1,6 @@
 在这里存放一些nep主动学习过程的脚本，基于官方的pynep代码库
 workflow:
+ps:tools.py asi_io.py maxvol.py maxvol_cpu.py maxcol_gpu.py为调用脚本，虽然不运行，但需要一起复制到工作目录中
 1.由train.xyz训练出nep.txt
 2.python select_active.py (in:nep.txt train.xyz out:active_set.asi)
 3.run MD ,拼接MD轨迹为一个文件all_explore.lammpstrj，python merge.py
